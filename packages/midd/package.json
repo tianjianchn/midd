@@ -1,9 +1,8 @@
 {
   "name": "midd",
   "description": "A light-weight, promise-based and middleware-driven web framework",
-  "version": "0.0.1",
-  "scripts": {
-  },
+  "version": "0.1.0",
+  "scripts": {},
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -13,8 +12,8 @@
   },
   "dependencies": {
     "on-finished": "^2.3.0",
-    "midd-compose": "^0.0.1",
-    "midd-router": "^0.0.1"
+    "midd-compose": "^0.1.0",
+    "midd-router": "^0.1.0"
   },
   "devDependencies": {},
   "homepage": "https://github.com/tianjianchn/midd",

@@ -1,9 +1,8 @@
 {
   "name": "midd-send-file",
   "description": "send file with headers and promise support",
-  "version": "0.0.1",
-  "scripts": {
-  },
+  "version": "0.1.0",
+  "scripts": {},
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -15,8 +14,8 @@
     "send": "^0.14.1"
   },
   "devDependencies": {
-    "midd": "^0.0.1",
-    "midd-url": "^0.0.1"
+    "midd": "^0.1.0",
+    "midd-url": "^0.1.0"
   },
   "homepage": "https://github.com/tianjianchn/midd",
   "repository": "https://github.com/tianjianchn/midd",
@@ -32,4 +31,3 @@
     "promise"
   ]
 }
-

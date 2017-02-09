@@ -1,9 +1,8 @@
 {
   "name": "midd-compose",
   "description": "Compose multiple middlewares to one",
-  "version": "0.0.1",
-  "scripts": {
-  },
+  "version": "0.1.0",
+  "scripts": {},
   "main": "dist/index.js",
   "files": [
     "dist/"

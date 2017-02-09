@@ -1,9 +1,8 @@
 {
   "name": "midd-ip",
   "description": "ip middleware for midd",
-  "version": "0.0.1",
-  "scripts": {
-  },
+  "version": "0.1.0",
+  "scripts": {},
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -11,10 +10,9 @@
   "engines": {
     "node": ">= 4"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "midd": "^0.0.1"
+    "midd": "^0.1.0"
   },
   "homepage": "https://github.com/tianjianchn/midd",
   "repository": "https://github.com/tianjianchn/midd",

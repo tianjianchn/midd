@@ -1,9 +1,8 @@
 {
   "name": "midd-session-mysql-store",
   "description": "mysql store for midd session middleware",
-  "version": "0.0.1",
-  "scripts": {
-  },
+  "version": "0.1.0",
+  "scripts": {},
   "main": "dist/index.js",
   "files": [
     "dist/"
@@ -16,8 +15,8 @@
     "mysql": "^2.11.1"
   },
   "devDependencies": {
-    "midd": "^0.0.1",
-    "midd-session": "^0.0.1"
+    "midd": "^0.1.0",
+    "midd-session": "^0.1.0"
   },
   "homepage": "https://github.com/tianjianchn/midd",
   "repository": "https://github.com/tianjianchn/midd",
@@ -33,4 +32,3 @@
     "mysql"
   ]
 }
-
