@@ -4,7 +4,7 @@
 * Use promise-based middlewares(support async/await)
 * Better error handle(see [Error Handle](#error-handle))
 * Easily use express middlewares(see [Migrate From Express](#migrate-from-express))
-* The core is light-weight, all functionalities are driven by midd-* middlewares, like `midd-router`, `midd-static`;
+* The core is light-weight, all functionalities are driven by midd-* middlewares, like `midd-router`, `midd-static`
 * Support request forward: `req.forward('/new/url')`
 
 ### Example
