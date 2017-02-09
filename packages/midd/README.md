@@ -75,7 +75,11 @@ app.express.use(require('compression')())
 app.express.use(require('body-parser').json())
 ```
 
+### Contributing
+Checkout our [CONTRIBUTING.md](/CONTRIBUTING.md) if you want to help out!
+
 ### License
+
 Licensed under MIT
 
 Copyright (c) 2017 [Tian Jian](https://github.com/tianjianchn)
