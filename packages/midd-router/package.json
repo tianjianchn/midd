@@ -1,0 +1,33 @@
+{
+  "name": "midd-router",
+  "description": "router middleware for midd",
+  "version": "0.0.1",
+  "scripts": {
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "path-to-regexp": "^1.2.1",
+    "midd-compose": "^0.0.1",
+    "midd-express-middlewares": "^0.0.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/tianjianchn/midd",
+  "repository": "https://github.com/tianjianchn/midd",
+  "bugs": "https://github.com/tianjianchn/midd/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "midd",
+    "router",
+    "route"
+  ]
+}

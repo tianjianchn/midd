@@ -1,0 +1,34 @@
+{
+  "name": "midd-session",
+  "description": "session middleware for midd",
+  "version": "0.0.1",
+  "scripts": {},
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "cookie": "^0.2.3",
+    "debug": "^2.6.0",
+    "ms": "^0.7.1",
+    "on-headers": "^1.0.1"
+  },
+  "devDependencies": {
+    "midd": "^0.0.1"
+  },
+  "homepage": "https://github.com/tianjianchn/midd",
+  "repository": "https://github.com/tianjianchn/midd",
+  "bugs": "https://github.com/tianjianchn/midd/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "midd",
+    "session"
+  ]
+}

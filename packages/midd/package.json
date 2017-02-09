@@ -1,0 +1,45 @@
+{
+  "name": "midd",
+  "description": "A light-weight, promise-based and middleware-driven web framework",
+  "version": "0.0.1",
+  "scripts": {
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "on-finished": "^2.3.0",
+    "midd-compose": "^0.0.1",
+    "midd-router": "^0.0.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/tianjianchn/midd",
+  "repository": "https://github.com/tianjianchn/midd",
+  "bugs": "https://github.com/tianjianchn/midd/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "midd",
+    "use",
+    "promise",
+    "express",
+    "middleware",
+    "co",
+    "async",
+    "await",
+    "coroutine",
+    "server",
+    "router",
+    "web",
+    "http",
+    "framework",
+    "light-weight"
+  ]
+}

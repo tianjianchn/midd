@@ -1,0 +1,35 @@
+{
+  "name": "midd-send-file",
+  "description": "send file with headers and promise support",
+  "version": "0.0.1",
+  "scripts": {
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "send": "^0.14.1"
+  },
+  "devDependencies": {
+    "midd": "^0.0.1",
+    "midd-url": "^0.0.1"
+  },
+  "homepage": "https://github.com/tianjianchn/midd",
+  "repository": "https://github.com/tianjianchn/midd",
+  "bugs": "https://github.com/tianjianchn/midd/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "send",
+    "file",
+    "promise"
+  ]
+}
+

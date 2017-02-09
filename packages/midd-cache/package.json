@@ -1,0 +1,33 @@
+{
+  "name": "midd-cache",
+  "description": "http cache middleware for midd",
+  "version": "0.0.1",
+  "scripts": {},
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "etag": "^1.7.0",
+    "fresh": "^0.4.0"
+  },
+  "devDependencies": {
+    "midd": "^0.0.1",
+    "midd-send": "^0.0.1"
+  },
+  "homepage": "https://github.com/tianjianchn/midd",
+  "repository": "https://github.com/tianjianchn/midd",
+  "bugs": "https://github.com/tianjianchn/midd/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "midd",
+    "cache"
+  ]
+}

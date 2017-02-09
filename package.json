@@ -1,0 +1,46 @@
+{
+  "name": "midd",
+  "version": "",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint packages/*/src packages/*/test",
+    "lint-fix": "npm run lint -- --fix",
+    "clean": "/bin/rm -rf packages/*/dist",
+    "build": "npm run lint && npm run clean && gulp build",
+    "watch": "npm run lint && npm run clean && gulp watch",
+    "test:only": "mocha --timeout 10000 --recursive --bail -r test/require.js --reporter spec packages/*/test/**/*.test.js",
+    "test": "npm run build && npm run test:only",
+    "cover:compiled": "istanbul cover _mocha -- -r test/require.js --reporter spec packages/*/test/**/*.test.js",
+    "cover": "npm run build -- --source-maps inline && npm run cover:compiled",
+    "publish": "npm test && lerna publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "after": "^0.8.2",
+    "babel-cli": "^6.18.0",
+    "babel-preset-full-node4": "^1.0.0",
+    "babel-register": "^6.18.0",
+    "chalk": "^1.1.3",
+    "eslint-config-easy": "^0.6.0",
+    "express": "^4.14.0",
+    "fs-extra": "^0.26.7",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-newer": "^1.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8",
+    "istanbul": "^1.1.0-alpha.1",
+    "lerna": "2.0.0-beta.36",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0",
+    "through2": "^2.0.1"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "repository": "https://github.com/tianjianchn/mido",
+  "keywords": []
+}
