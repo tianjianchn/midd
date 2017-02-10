@@ -1,7 +1,7 @@
 {
   "name": "midd-router",
   "description": "router middleware for midd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {},
   "main": "dist/index.js",
   "files": [
@@ -13,7 +13,7 @@
   "dependencies": {
     "path-to-regexp": "^1.2.1",
     "midd-compose": "^0.1.0",
-    "midd-express-middlewares": "^0.1.0"
+    "midd-express-middlewares": "^0.1.1"
   },
   "devDependencies": {},
   "homepage": "https://github.com/tianjianchn/midd",

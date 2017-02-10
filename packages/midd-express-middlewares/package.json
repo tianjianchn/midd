@@ -1,7 +1,7 @@
 {
   "name": "midd-express-middlewares",
   "description": "Wrap express middleware to be used in midd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {},
   "main": "dist/index.js",
   "files": [

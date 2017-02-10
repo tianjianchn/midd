@@ -1,7 +1,7 @@
 {
   "name": "midd-static",
   "description": "static files middleware for midd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {},
   "main": "dist/index.js",
   "files": [
@@ -11,11 +11,11 @@
     "node": ">= 4"
   },
   "dependencies": {
-    "midd-send-file": "^0.1.0"
+    "midd-send-file": "^0.1.1"
   },
   "devDependencies": {
-    "midd": "^0.1.0",
-    "midd-router": "^0.1.0"
+    "midd": "^0.1.1",
+    "midd-router": "^0.1.1"
   },
   "homepage": "https://github.com/tianjianchn/midd",
   "repository": "https://github.com/tianjianchn/midd",
