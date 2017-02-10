@@ -13,6 +13,7 @@
     "test": "npm run build && npm run test:only",
     "cover:compiled": "istanbul cover _mocha -- -r test/require.js --reporter spec packages/*/test/**/*.test.js",
     "cover": "npm run build -- --source-maps inline && npm run cover:compiled",
+    "updated": "lerna updated",
     "publish": "npm test && lerna publish"
   },
   "dependencies": {},

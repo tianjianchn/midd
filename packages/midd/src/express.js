@@ -1,10 +1,19 @@
-const Router = require('midd-router');
 
-module.exports = (app) => {
-  const router = Router();
-  app.use(router);
+const middRouter = require('midd-router');
 
-  router.Router = Router;
+const VERBS = [...middRouter.VERBS, 'use', 'all'];
 
-  app.express = router;
+module.exports = function bindExpress(app) {
+  const express = { Router: middRouter };
+
+  for (const verb of VERBS) {
+    express[verb] = (...args) => {
+      const router = middRouter();
+      router.express[verb](...args);
+      app.use(router);
+    };
+  }
+
+  app.express = express;
 };
+

@@ -49,7 +49,6 @@ describe('wrap express middleware', function () {
     await wrapExpressRequest(middlewares, () => result.push(4), 500, 'something wrong');
     assert.deepStrictEqual(result, [1, 2]);
   });
-
   it('should work when response finished without call next', async function () {
     let result;
     const middlewares = [
@@ -68,7 +67,6 @@ describe('wrap express middleware', function () {
     await wrapExpressRequest(middlewares, () => result.push(3), 200, 'hello');
     assert.deepStrictEqual(result, [1, 2, 3]);
   });
-
   it('should work when response error without call next', async function () {
     let result;
     const middlewares = [(req, resp, next) => {
@@ -82,6 +80,24 @@ describe('wrap express middleware', function () {
     assert.deepStrictEqual(result, [1]);
     await wrapExpressRequest(middlewares, () => result.push(2), 400, 'bad param');
     assert.deepStrictEqual(result, [1]);
+  });
+  it('should work with mixed express and midd middlewares', async function () {
+    const middlewares = [
+      wrapExpressMiddleware((req, resp, next) => {
+        next();
+      }),
+      (req, resp, next) => next(),
+      wrapExpressMiddleware((req, resp, next) => {
+        resp.end('hello');
+      }),
+    ];
+    const app = http.createServer((req, resp) => Compose(middlewares)(req, resp).then(() => {
+      resp.statusCode = 404;
+      return resp.end('Not Found');
+    }));
+
+    const req = request(app.listen());
+    await req.get('/').expect(200, 'hello');
   });
 });
 

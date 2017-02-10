@@ -27,4 +27,20 @@ describe('router.express.VERB', function () {
     const req = request(app.listen());
     req.get('/').expect(200, '[1,2,3]', done);
   });
+  it('should work with mixed express and midd middlewares', function (done) {
+    const router = Router(),
+      app = http.createServer((req, resp) => router(req, resp));
+    app.on('error', done);
+
+    router.use((req, resp, next) => next());
+    router.express.use((req, resp, next) => {
+      next();
+    });
+    router.express.use((req, resp, next) => {
+      resp.end('hello');
+    });
+
+    const req = request(app.listen());
+    req.get('/').expect(200, 'hello', done);
+  });
 });

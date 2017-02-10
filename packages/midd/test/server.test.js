@@ -6,7 +6,7 @@ const assert = require('assert');
 const request = require('supertest');
 const useServer = require('..');
 
-describe('base', function () {
+describe('midd', function () {
   describe('respond 404', function () {
     it('should work with 0 middleware', async function () {
       const app = createApp();

@@ -13,7 +13,7 @@ const VERBS = require('./verbs');
 const { addRouteFactory, matchRoute } = require('./route');
 const bindExpressVerbs = require('./express');
 
-function createRouter(options = {}) {
+function createRouterMiddleware(options = {}) {
   router.routes = [];
 
   // the router instance
@@ -55,4 +55,6 @@ function createRouter(options = {}) {
   return router;
 }
 
-module.exports = createRouter;
+createRouterMiddleware.VERBS = VERBS;
+
+module.exports = createRouterMiddleware;
