@@ -1,5 +1,4 @@
 
-
 const Emitter = require('events');
 const http = require('http');
 const onFinished = require('on-finished');
@@ -25,7 +24,7 @@ class Application extends Emitter {
     return this;
   }
 
-  // used at `http.createServer(app.listerner())`
+  // used like `http.createServer(app.listerner())`
   listener = () => {
     const stack = compose(this._middlewares);
 
@@ -39,7 +38,6 @@ class Application extends Emitter {
 
     return (req, resp) => {
       req.app = this;
-      req.routePath = '';// compatible with use-router
 
       req.forward = forward.bind(this, req, resp);
 

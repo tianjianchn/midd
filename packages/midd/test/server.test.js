@@ -86,16 +86,6 @@ describe('midd', function () {
       await req.get('/').expect(200, 'hello');
     });
 
-    it('should has req.routePath', async function () {
-      const app = createApp();
-      app.use(function (req, resp, next) {
-        assert.strictEqual(req.routePath, '');
-        resp.end('hello');
-      });
-      const req = request(require('http').createServer(app.listener()));
-      await req.get('/').expect(200, 'hello');
-    });
-
     it('should work with the listener method', async function () {
       const app = createApp();
       const req = request(require('http').createServer(app.listener()));
