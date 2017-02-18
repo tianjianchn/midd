@@ -1,0 +1,28 @@
+{
+  "name": "uni-compose",
+  "description": "Compose multiple middlewares to one",
+  "version": "0.1.0",
+  "scripts": {},
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/uni-compose",
+  "repository": "https://github.com/tianjianchn/midd/tree/master/packages/uni-compose",
+  "bugs": "https://github.com/tianjianchn/midd/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Tian Jian",
+    "email": "tianjianchn@qq.com"
+  },
+  "keywords": [
+    "compose",
+    "middleware",
+    "midd"
+  ]
+}
