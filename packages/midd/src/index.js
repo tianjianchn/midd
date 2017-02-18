@@ -3,7 +3,7 @@
 const Emitter = require('events');
 const http = require('http');
 const onFinished = require('on-finished');
-const compose = require('midd-compose');
+const compose = require('uni-compose');
 const bindExpress = require('./express');
 
 const statuses = http.STATUS_CODES;

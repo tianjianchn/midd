@@ -1,5 +1,3 @@
-/* eslint-env mocha*/
-/* eslint prefer-arrow-callback:off, func-names:off, import/no-unresolved:off, import/no-extraneous-dependencies:off */
 
 const assert = require('assert');
 const http = require('http');
