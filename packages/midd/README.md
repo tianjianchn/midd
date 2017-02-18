@@ -33,7 +33,7 @@ app.listen(8080)
 
 ### API
 #### middServer()
-create an app server. 
+Create an app server. 
 
 #### app.use(...middlewares)
 Attach middlewares. A middleware is a function like `(req, resp, next)=>Promise`.
@@ -48,7 +48,7 @@ Catch uncaught error in middlewares
 Forward the request to another url.
 
 #### app.listener()
-Used at `http.createServer(app.listerner())`
+Used like `http.createServer(app.listerner())`
 
 ## Middlewares
 * [midd-router](/packages/midd-router): Router for midd
@@ -76,7 +76,7 @@ app.express.use(require('body-parser').json())
 ```
 
 ### Contributing
-Checkout our [CONTRIBUTING.md](/CONTRIBUTING.md) if you want to help out!
+Checkout the [CONTRIBUTING.md](/CONTRIBUTING.md) if you want to help
 
 ### License
 

@@ -18,8 +18,8 @@
     "midd": "^0.1.1",
     "midd-send": "^0.1.1"
   },
-  "homepage": "https://github.com/tianjianchn/midd",
-  "repository": "https://github.com/tianjianchn/midd",
+  "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/midd-cache",
+  "repository": "https://github.com/tianjianchn/midd/tree/master/packages/midd-cache",
   "bugs": "https://github.com/tianjianchn/midd/issues",
   "license": "MIT",
   "author": {
