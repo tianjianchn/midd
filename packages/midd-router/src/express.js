@@ -1,7 +1,8 @@
 
 const wrapExpressMiddleware = require('midd-express-middlewares');
 
-const VERBS = require('./verbs');
+const Router = require('uni-router');
+const VERBS = Router.VERBS;
 
 function bindVerb(router, verb) {
   return (pattern, ...middlewares) => {

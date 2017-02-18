@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "path-to-regexp": "^1.2.1",
-    "midd-compose": "^0.1.0",
+    "uni-compose": "^0.1.0",
+    "uni-router": "^0.1.1",
     "midd-express-middlewares": "^0.1.1"
   },
   "devDependencies": {},
-  "homepage": "https://github.com/tianjianchn/midd",
-  "repository": "https://github.com/tianjianchn/midd",
+  "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/midd-router",
+  "repository": "https://github.com/tianjianchn/midd/tree/master/packages/midd-router",
   "bugs": "https://github.com/tianjianchn/midd/issues",
   "license": "MIT",
   "author": {

@@ -1,12 +1,10 @@
-/* eslint-env mocha */
-/* eslint prefer-arrow-callback:off, func-names:off, import/no-unresolved:off, import/no-extraneous-dependencies:off */
 
 // const assert = require('assert');
 const http = require('http');
 const request = require('supertest');
 const Router = require('..');
 
-describe('router.express.VERB', function () {
+describe('midd-router: router.express.VERB', function () {
   it('should work when call next', function (done) {
     const router = Router(),
       app = http.createServer((req, resp) => router(req, resp));
