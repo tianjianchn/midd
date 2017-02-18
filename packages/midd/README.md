@@ -1,4 +1,4 @@
-# A light-weight, promise-based and middleware-driven web framework
+# A light-weight, promise-based, middleware-driven and express-compatible web framework
 
 ### Features
 * Use promise-based middlewares(support async/await)
@@ -51,7 +51,7 @@ Forward the request to another url.
 Used like `http.createServer(app.listerner())`
 
 ## Middlewares
-* [midd-router](/packages/midd-router): Router for midd
+* [midd-router](/packages/midd-router): Router that support `use()`, `get()`, `post()` etc
 * [midd-static](/packages/midd-static): Serve static files
 * [midd-session](/packages/midd-session): Session middleware
 * [midd-send](/packages/midd-send): Send methods middleware

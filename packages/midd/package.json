@@ -1,6 +1,6 @@
 {
   "name": "midd",
-  "description": "A light-weight, promise-based and middleware-driven web framework",
+  "description": "A light-weight, promise-based, middleware-driven and express-compatible web framework",
   "version": "0.1.1",
   "scripts": {},
   "main": "dist/index.js",
