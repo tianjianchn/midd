@@ -1,29 +1,29 @@
 
-/* eslint-env mocha */
-/* eslint prefer-arrow-callback:off, func-names:off, import/no-unresolved:off, import/no-extraneous-dependencies:off, no-plusplus:off */
-
 const assert = require('assert');
 const mysql = require('mysql');
 const request = require('supertest');
 const Server = require('midd');
 const middSession = require('midd-session');
 const MysqlStore = require('..');
+const { connProps, checkConnectError, skipOnConnectError } = require('./helper');
 
 const storeOptions = {
-  database: 'test',
-  user: 'test',
-  password: 'test',
+  ...connProps,
   independentProperties: {
     userId: 'VARCHAR(32)',
   },
   showError: true,
 };
-describe('custom columns', () => {
+
+describe('midd-session-mysql-store: custom columns', () => {
+  before(checkConnectError);
   afterEach((done) => {
     const db = mysql.createConnection(storeOptions);
     db.query('drop table sessions', done);
   });
   it('should create one session and touch it', async function () {
+    skipOnConnectError(this);
+
     this.timeout(10000);
     let count = 0;
     const store = new MysqlStore(storeOptions);
@@ -54,7 +54,9 @@ describe('custom columns', () => {
     assert.notEqual(newSess.accessed, sess.accessed);
   });
 
-  it('should delete session property', async () => {
+  it('should delete session property', async function () {
+    skipOnConnectError(this);
+
     const store = new MysqlStore(storeOptions);
     await sleep(100);
 

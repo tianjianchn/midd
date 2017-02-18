@@ -1,27 +1,26 @@
 
-/* eslint-env mocha */
-/* eslint prefer-arrow-callback:off, func-names:off, import/no-unresolved:off, import/no-extraneous-dependencies:off, no-plusplus:off */
-
 const assert = require('assert');
 const mysql = require('mysql');
 const request = require('supertest');
 const Server = require('midd');
 const middSession = require('midd-session');
 const MysqlStore = require('..');
+const { connProps, checkConnectError, skipOnConnectError } = require('./helper');
 
 const storeOptions = {
-  database: 'test',
-  user: 'test',
-  password: 'test',
+  ...connProps,
   showError: true,
 };
-describe('basic', () => {
+describe('midd-session-mysql-store: basic', function () {
+  before(checkConnectError);
   afterEach((done) => {
     const db = mysql.createConnection(storeOptions);
     db.query('drop table sessions', done);
   });
   it('should create one session and touch it', async function () {
+    skipOnConnectError(this);
     this.timeout(10000);
+
     let count = 0;
     const store = new MysqlStore(storeOptions);
     await sleep(100);
@@ -49,7 +48,9 @@ describe('basic', () => {
     assert.equal(newSess.data.n, sess.data.n);
     assert.notEqual(newSess.accessed, sess.accessed);
   });
-  it('should create multiple session mysql', async () => {
+  it('should create multiple session mysql', async function () {
+    skipOnConnectError(this);
+
     let count = 0;
     const store = new MysqlStore(storeOptions);
     await sleep(100);
@@ -67,7 +68,9 @@ describe('basic', () => {
     await reqExpect(req.get('/'), 200, '2');
     assert.equal(await store.length, 2);
   });
-  it('should destroy the session mysql', async () => {
+  it('should destroy the session mysql', async function () {
+    skipOnConnectError(this);
+
     const store = new MysqlStore(storeOptions);
     await sleep(100);
 
@@ -97,7 +100,9 @@ describe('basic', () => {
     assert.notEqual(newSess.id, sess.id);
   });
 
-  it('should delete session property', async () => {
+  it('should delete session property', async function () {
+    skipOnConnectError(this);
+
     const store = new MysqlStore(storeOptions);
     await sleep(100);
 
