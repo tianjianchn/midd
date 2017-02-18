@@ -1,7 +1,7 @@
 {
   "name": "midd-session-file-store",
   "description": "file store for midd session middleware",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {},
   "main": "dist/index.js",
   "files": [
@@ -15,8 +15,8 @@
     "debug": "^2.6.0"
   },
   "devDependencies": {
-    "midd": "^0.1.1",
-    "midd-session": "^0.1.1"
+    "midd": "^0.1.2",
+    "midd-session": "^0.1.2"
   },
   "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/midd-session-file-store",
   "repository": "https://github.com/tianjianchn/midd/tree/master/packages/midd-session-file-store",

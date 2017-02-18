@@ -1,7 +1,7 @@
 {
   "name": "uni-router",
   "description": "router middleware used in both server(midd) and client(stas)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {},
   "main": "dist/index.js",
   "files": [
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "path-to-regexp": "^1.2.1",
-    "uni-compose": "^0.1.0",
-    "midd-express-middlewares": "^0.1.1"
+    "uni-compose": "^0.1.1",
+    "midd-express-middlewares": "^0.1.2"
   },
   "devDependencies": {},
   "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/uni-router",

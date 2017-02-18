@@ -1,7 +1,7 @@
 {
   "name": "uni-compose",
   "description": "Compose multiple middlewares to one",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {},
   "main": "dist/index.js",
   "files": [
