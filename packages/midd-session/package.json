@@ -1,7 +1,7 @@
 {
   "name": "midd-session",
   "description": "session middleware for midd",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {},
   "main": "dist/index.js",
   "files": [
@@ -17,7 +17,7 @@
     "on-headers": "^1.0.1"
   },
   "devDependencies": {
-    "midd": "^0.1.2"
+    "midd": "^0.1.3"
   },
   "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/midd-session",
   "repository": "https://github.com/tianjianchn/midd/tree/master/packages/midd-session",
