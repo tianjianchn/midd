@@ -11,8 +11,6 @@
     "node": ">= 4"
   },
   "dependencies": {
-    "path-to-regexp": "^1.2.1",
-    "uni-compose": "^0.1.1",
     "uni-router": "^0.1.2",
     "midd-express-middlewares": "^0.1.2"
   },

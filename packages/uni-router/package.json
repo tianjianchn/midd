@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "path-to-regexp": "^1.2.1",
-    "uni-compose": "^0.1.1",
-    "midd-express-middlewares": "^0.1.2"
+    "uni-compose": "^0.1.1"
   },
   "devDependencies": {},
   "homepage": "https://github.com/tianjianchn/midd/tree/master/packages/uni-router",
