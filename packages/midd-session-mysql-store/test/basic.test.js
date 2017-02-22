@@ -34,6 +34,7 @@ describe('midd-session-mysql-store: basic', function () {
 
     const req = request.agent(app.listen());
     await reqExpect(req.get('/'), 200, '1');
+    await sleep(100);
     assert.equal(await store.length, 1);
     const sess = await mysqlSession();
 
@@ -48,7 +49,7 @@ describe('midd-session-mysql-store: basic', function () {
     assert.equal(newSess.data.n, sess.data.n);
     assert.notEqual(newSess.accessed, sess.accessed);
   });
-  it('should create multiple session mysql', async function () {
+  it('should create multiple session', async function () {
     skipOnConnectError(this);
 
     let count = 0;
@@ -64,11 +65,13 @@ describe('midd-session-mysql-store: basic', function () {
     const req = request(app.listen());
 
     await reqExpect(req.get('/'), 200, '1');
+    await sleep(100);
     assert.equal(await store.length, 1);
     await reqExpect(req.get('/'), 200, '2');
+    await sleep(100);
     assert.equal(await store.length, 2);
   });
-  it('should destroy the session mysql', async function () {
+  it('should destroy the session', async function () {
     skipOnConnectError(this);
 
     const store = new MysqlStore(storeOptions);
@@ -88,13 +91,13 @@ describe('midd-session-mysql-store: basic', function () {
     const req = request.agent(app.listen());
 
     await reqExpect(req.get('/1'), 200, '1');
-    assert.equal(await store.length, 1);
     await sleep(100);
+    assert.equal(await store.length, 1);
     const sess = await mysqlSession();
 
     await reqExpect(req.get('/2'), 200, '2');
-    assert.equal(await store.length, 1);
     await sleep(100);
+    assert.equal(await store.length, 1);
     const newSess = await mysqlSession();
 
     assert.notEqual(newSess.id, sess.id);
@@ -120,13 +123,13 @@ describe('midd-session-mysql-store: basic', function () {
     const req = request.agent(app.listen());
 
     await reqExpect(req.get('/1'), 200, '1');
-    assert.equal(await store.length, 1);
     await sleep(100);
+    assert.equal(await store.length, 1);
     const sess = await mysqlSession();
 
     reqExpect(req.get('/2'), 200, 'undefined');
-    assert.equal(await store.length, 1);
     await sleep(100);
+    assert.equal(await store.length, 1);
     const newSess = await mysqlSession();
 
     assert.equal(newSess.id, sess.id);
