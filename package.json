@@ -5,7 +5,6 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "lint": "eslint packages/*/src packages/*/test",
-    "lint-fix": "npm run lint -- --fix",
     "clean": "/bin/rm -rf packages/*/dist",
     "build": "npm run clean && gulp build",
     "watch": "npm run clean && gulp watch",

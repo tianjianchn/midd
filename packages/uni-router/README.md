@@ -29,8 +29,11 @@ app.use(router)
 Options have:
 * params: object. The default params for `req.params`.
 
-#### router.use|all|get|post|...([pattern], ...middlewares)
-Attach routes to the pattern. If no pattern specified, they will be attached at root path('/').
+#### router.use(pattern?: string, middleware1, middleware2, ...)
+Attach routes to the pattern and prefix match `req.url` with the pattern. If no pattern specified, they will be attached at root path('/'). 
+
+#### router.use|all|get|post|...(pattern?: string, middleware1, middleware2, ...)
+Attach routes to the pattern, and exact match `req.url` with the pattern. If no pattern specified, they will be attached at root path('/').
 
 #### req.params
 If the pattern used in router verbs have named part(like '/:name'), `req.params` will contain the named part and its value. 
